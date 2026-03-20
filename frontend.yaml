@@ -3,9 +3,10 @@
   become: yes
   tasks:
   - name: installing the nginx
-    ansible.builtin.packgae:
+    ansible.builtin.dnf:
       name: nginx
       state: present
+
   - name: starting the nginx
     ansible.builtin.service:
      name: nginx
@@ -42,4 +43,4 @@
   - name: restart nginx
     ansible.builtin.service:
       state: restarted
-      name: nginx
+      name: nginx 
