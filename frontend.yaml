@@ -30,7 +30,7 @@
      path: /tmp/frontend.zip
 
   - name: unarchieve the code
-    ansible.builtin.unarchieve:
+    ansible.builtin.unarchive:
       src: /tmp/backend.zip
       dest: /usr/share/nginx/html
       remote_src: yes
